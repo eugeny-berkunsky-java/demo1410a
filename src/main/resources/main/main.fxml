@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+    <center>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0">
+            <TextField fx:id="userIdField" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="52.0" />
+            <TextField fx:id="userNameField" layoutX="74.0" layoutY="14.0" />
+            <TextField fx:id="userAgeField" layoutX="232.0" layoutY="14.0" prefHeight="26.0" prefWidth="70.0" />
+            <Button layoutX="313.0" layoutY="14.0" mnemonicParsing="false" onAction="#addUser" text="Добавить" />
+         <TableView fx:id="peopleTable" layoutX="14.0" layoutY="54.0" prefHeight="287.0" prefWidth="570.0">
+           <columns>
+             <TableColumn fx:id="idColumn" prefWidth="75.0" text="№" />
+             <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+             <TableColumn fx:id="ageColumn" prefWidth="75.0" text="Age" />
+           </columns>
+         </TableView>
+        </AnchorPane>
+    </center>
+   <top>
+       <VBox prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <MenuBar>
+               <Menu mnemonicParsing="false" text="File">
+                   <MenuItem mnemonicParsing="false" text="Close" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Edit">
+                   <MenuItem mnemonicParsing="false" text="Delete" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                   <MenuItem mnemonicParsing="false" text="About" />
+               </Menu>
+           </MenuBar>
+           <ToolBar prefHeight="40.0" prefWidth="200.0">
+               <Button mnemonicParsing="false" text="Button" />
+           </ToolBar>
+       </VBox>
+   </top>
+</BorderPane>
